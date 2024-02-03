@@ -1,0 +1,33 @@
+#1/bin/bash
+
+##########
+## The script below is to display number btween 1 and 50 that are divisible by 3 and 5 but not by 15. The are 2 IF condtions and a For Loop
+#
+#########
+
+# divisible by 3, divisible by 5, not 3*5=15
+
+for i in {1..50}; do
+if ([ 'expr $i % 3' == 0 ] || [ 'expr $i % 5' ]) && [ 'expr $i % 15' != 0 ];
+then
+        echo $i
+fi;
+done
+
+************************************************************************************************
+
+#!/bin/bash
+
+# this script is to print the number of times "s" appears in MISSISSIPPI.
+# the script is as follows 
+
+x=mississippi
+
+grep -o "s" <<<"$x" | wc -l
+
+
+Note:
+grep => to extract/filter details about the parameter stated after it.
+-o => only
+| => pipe
+wc -l => word count/no of line
